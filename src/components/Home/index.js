@@ -35,7 +35,7 @@ class Home extends Component {
 
   selectedImage = id => {
     const {choicesList} = this.props
-    const value = Math.floor(Math.random() * 2)
+    const value = Math.ceil(Math.random() * 2)
     const image = choicesList.filter(eachItem => eachItem.id === id)
     if (id === 'PAPER' && choicesList[value].id === 'ROCK') {
       this.setState(prevState => ({
